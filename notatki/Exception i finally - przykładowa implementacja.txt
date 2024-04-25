@@ -1,0 +1,27 @@
+class NeedTeacherHelpException extends Exception    // konieczne extends Exception
+{
+    public NeedTeacherHelpException()
+    {
+        super("Need help!");    // Kod super("Need help!"); jest wywołaniem konstruktora klasy bazowej, czyli w tym przypadku klasy Exception.
+        // Konstruktor ten przyjmuje jako argument wiadomość, która będzie przypisana do wyjątku.
+    }
+}
+
+public class Main
+{
+    public static void main(String[] args)
+    {
+        try
+        {
+            throw new NeedTeacherHelpException();
+        } catch (NeedTeacherHelpException e)
+        {
+            System.out.println("Wystąpił wyjątek: " + e.getMessage());
+            // Tutaj można dodać kod obsługi wyjątku, np. zawiadomienie nauczyciela
+        }
+        finally
+        {
+            System.out.println("Ten kod zostanie wykonany niezależnie od tego, czy wystąpił wyjątek czy nie.");
+        }
+    }
+}

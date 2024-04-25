@@ -1,0 +1,19 @@
+import java.util.HashMap;
+import java.util.Map;
+
+class Vec2
+{
+    int x;
+    int y;
+}
+
+public class Main {
+    public static void main(String[] args)
+    {
+        Map<Integer, String> employees = new HashMap<>();
+
+        employees.put(0, "Jan");
+        employees.remove(0);
+
+    }
+}

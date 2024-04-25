@@ -1,0 +1,21 @@
+Klasy abstrakcyjne i interfejsy są kluczowymi koncepcjami w Javie, które pozwalają na implementację abstrakcji i polimorfizmu.
+
+Klasa abstrakcyjna: Jest to klasa, która nie może być bezpośrednio instancjonowana, co oznacza, że nie można utworzyć obiektu z klasy abstrakcyjnej. Służy ona do definiowania ogólnych zachowań i właściwości, które mogą być dziedziczone przez klasy pochodne. Klasy abstrakcyjne mogą zawierać metody abstrakcyjne (bez ciała), które muszą być zaimplementowane w klasach dziedziczących. Mogą także zawierać metody zdefiniowane (z ciałem), które mogą być wykorzystywane bez zmiany przez klasy pochodne.Przykład:
+
+abstract class Shape {
+    // Metoda abstrakcyjna
+    abstract double area();
+    
+    // Metoda zdefiniowana
+    void display() {
+        System.out.println("This is a shape.");
+    }
+}
+
+Interfejs: Jest to zbiorcza umowa, która definiuje zestaw metod (bez ich implementacji), które muszą być zaimplementowane przez dowolną klasę, która implementuje interfejs. W przeciwieństwie do klas abstrakcyjnych, interfejsy mogą zawierać tylko metody abstrakcyjne, a także stałe (zmienne finalne, które są traktowane jako stałe). Klasy implementujące interfejs muszą dostarczyć implementacje wszystkich metod zdefiniowanych w interfejsie.Przykład:
+
+interface Drawable {
+    void draw();
+}
+
+Podsumowując, klasy abstrakcyjne są wykorzystywane do grupowania wspólnych zachowań i cech w jednym miejscu, które mogą być dziedziczone przez klasy pochodne, podczas gdy interfejsy definiują zestaw metod, które muszą być zaimplementowane przez klasy implementujące interfejs. Oba mechanizmy są kluczowe dla programowania obiektowego w Javie i pomagają w tworzeniu elastycznych i skalowalnych aplikacji.
